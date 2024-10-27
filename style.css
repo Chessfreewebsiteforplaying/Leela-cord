@@ -1,31 +1,88 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Style */
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f3f3f3;
+    background-color: #1e1e2f;
+    color: #eee;
 }
 
+/* Chat Container */
 #chat-container {
-    width: 300px;
-    max-width: 100%;
-    padding: 10px;
-    border: 1px solid #ddd;
-    background-color: white;
+    width: 320px;
+    max-width: 90%;
+    background: url('images/chat-background.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    color: #eee;
 }
 
+/* Chat Box */
 #chat-box {
-    height: 200px;
+    height: 300px;
+    padding: 10px;
     overflow-y: auto;
-    border: 1px solid #ddd;
-    padding: 5px;
-    margin-bottom: 10px;
+    background-color: rgba(30, 30, 47, 0.8); /* Slight transparency for readability */
+    color: #eee;
 }
 
+/* Chat Message Style */
+#chat-box div {
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+/* Different Message Styles */
+#chat-box .user-message {
+    background-color: rgba(59, 59, 79, 0.8);
+    align-self: flex-end;
+}
+
+#chat-box .bot-message {
+    background-color: rgba(78, 78, 111, 0.8);
+    align-self: flex-start;
+}
+
+/* Input Container */
+#input-container {
+    display: flex;
+    border-top: 1px solid #444;
+}
+
+/* Chat Input */
 #chat-input {
-    width: 75%;
-    padding: 5px;
-    margin-right: 5px;
+    flex: 1;
+    padding: 10px;
+    background-color: #333;
+    color: #eee;
+    border: none;
+    outline: none;
+}
+
+/* Send Button */
+button {
+    padding: 10px 15px;
+    background-color: #555;
+    color: #eee;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #777;
 }
